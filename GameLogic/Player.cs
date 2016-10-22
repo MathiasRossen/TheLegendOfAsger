@@ -15,6 +15,8 @@ namespace GameLogic
         string name = "Asger";
         int skillPoint = 1;
         int maxHp = 1;
+        int currency;
+
 
         public int Attack
         {
@@ -84,6 +86,19 @@ namespace GameLogic
             set
             {
                 maxHp = value;
+            }
+        }
+
+        public int Currency
+        {
+            get
+            {
+                return currency;
+            }
+
+            set
+            {
+                currency = value;
             }
         }
 

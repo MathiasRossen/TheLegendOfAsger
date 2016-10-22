@@ -29,6 +29,11 @@ namespace GameLogic
         {
             get;
         }
+
+        int Currency
+        {
+            get;
+        }
     }
 
 }
