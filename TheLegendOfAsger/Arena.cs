@@ -38,6 +38,10 @@ namespace TheLegendOfAsger
                         enemy = enemyList[2];
                         BattleArena(player, enemy);
                         break;
+                    case "4":
+                        enemy = enemyList[3];
+                        BattleArena(player, enemy);
+                        break;
                     case "e":
                         running = false;
                         break;
@@ -109,6 +113,13 @@ namespace TheLegendOfAsger
             Console.WriteLine("Name: {0}", creature.Name);
             Console.WriteLine("HP: {0}", creature.Hp);
             Console.WriteLine("Attack: {0}", creature.Attack);
+        }
+
+        private void DisplayStats(Player player)
+        {
+            Console.WriteLine("Name: {0}", player.Name);
+            Console.WriteLine("HP: {0}/{1}", player.Hp, player.MaxHp);
+            Console.WriteLine("Attack: {0}", player.Attack);
         }
     }
 }

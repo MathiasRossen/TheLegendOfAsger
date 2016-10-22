@@ -40,7 +40,7 @@ namespace TheLegendOfAsger
         private void DisplayStats(Player player)
         {
             Console.WriteLine("Name: {0}", player.Name);
-            Console.WriteLine("HP: {0}", player.Hp);
+            Console.WriteLine("HP: {0}/{1}", player.Hp, player.MaxHp);
             Console.WriteLine("Attack: {0}", player.Attack);
             Console.WriteLine();
             Console.WriteLine("Skill points: {0}", player.SkillPoint);
