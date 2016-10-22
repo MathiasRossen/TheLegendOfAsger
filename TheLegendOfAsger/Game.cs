@@ -36,7 +36,7 @@ namespace TheLegendOfAsger
                         break;
 
                     case "3":
-                        GameController.PassDay();
+                        Days.PassDay();
                         break;
                     default:
                         DisplayInputError();
@@ -87,7 +87,7 @@ namespace TheLegendOfAsger
 
         public static void DisplayDay()
         {
-            switch (GameController.CurrentDay)
+            switch (Days.CurrentDay)
             {
                 case WeekDays.Monday:
                     Console.WriteLine("Monday");
