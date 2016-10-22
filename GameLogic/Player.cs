@@ -60,6 +60,10 @@ namespace GameLogic
             }
         }
 
-
+        public int SkillPoint
+        {
+            get;
+            
+        }
     }
 }

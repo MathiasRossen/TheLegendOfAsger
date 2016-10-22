@@ -12,6 +12,7 @@ namespace GameLogic
         int attack = 5;
         int hp = 5;
         string name = "Enemy";
+        int skillPoint;
 
         public int Attack
         {
@@ -46,12 +47,22 @@ namespace GameLogic
                 return name;
             }
         }
+
+        public int SkillPoint
+        {
+            get
+            {
+                return skillPoint;
+            }
+        }
+
         // not a reff.
-        public Enemy(string name, int hp, int attack)
+        public Enemy(string name, int hp, int attack, int skillPoint)
         {
             this.name = name;
             this.hp = hp;
             this.attack = attack;
+            this.skillPoint = skillPoint;
         } 
     }
 }

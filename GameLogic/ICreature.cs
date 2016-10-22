@@ -24,6 +24,11 @@ namespace GameLogic
         {
             get;
         }
+
+        int SkillPoint
+        {
+            get;
+        }
     }
 
 }

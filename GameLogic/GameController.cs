@@ -25,4 +25,6 @@ namespace GameLogic
                 return BattleOutcome.Lose;
         }
     }
+
+
 }
