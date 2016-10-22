@@ -69,31 +69,41 @@ namespace TheLegendOfAsger
         private void BattleArena(Player player, ICreature enemy)
         {
             GameController gameController = new GameController();
+            BattleOutcome outcome = BattleOutcome.None;
 
-            Console.Clear();
-            DisplayStats(player);
-            Console.WriteLine(" VS");
-            DisplayStats(enemy);
-            Console.WriteLine();
-            Console.Write("Press enter to start the battle..");
-            Console.ReadLine();
-
-            Console.WriteLine();
-            Console.WriteLine("{0} did {1} damage to {2}", player.Name, player.Attack, enemy.Name);
-            Console.WriteLine("{0} counterattacked for {1} damage!", enemy.Name, enemy.Attack);
-            Console.WriteLine();
-
-            BattleOutcome outcome = gameController.CheckForWinner(player, enemy);
-
-            if (outcome == BattleOutcome.Win)
+            do
             {
-                Console.WriteLine("{0} has beaten {1}!", player.Name, enemy.Name);
-                Console.Write("{0} has gained {1} skill points!", player.Name, enemy.SkillPoint);
+                Console.Clear();
+                DisplayStats(player);
+                Console.WriteLine(" VS");
+                DisplayStats(enemy);
+                Console.WriteLine();
+                Console.Write("Press enter to start the round..");
+                Console.ReadLine();
+
+                Console.WriteLine();
+                Console.WriteLine("{0} did {1} damage to {2}", player.Name, player.Attack, enemy.Name);
+                Console.WriteLine("{0} counterattacked for {1} damage!", enemy.Name, enemy.Attack);
+                Console.ReadLine();
+
+                outcome = gameController.CheckForWinner(player, enemy);
             }
-            else if (outcome == BattleOutcome.Draw)
-                Console.Write("{0} and {1} both passed out in the tragic battle.", player.Name, enemy.Name);
-            else
-                Console.Write("{0} was defeated by {1}!", player.Name, enemy.Name);
+            while (outcome == BattleOutcome.None);
+
+            switch (outcome) {
+                case BattleOutcome.Win:
+                    Console.WriteLine("{0} has beaten {1}!", player.Name, enemy.Name);
+                    Console.Write("{0} has gained {1} skill point(s)!", player.Name, enemy.SkillPoint);
+                    break;
+
+                case BattleOutcome.Draw:
+                    Console.Write("{0} and {1} both passed out in the tragic battle.", player.Name, enemy.Name);
+                    break;
+
+                case BattleOutcome.Lose:
+                    Console.Write("{0} was defeated by {1}!", player.Name, enemy.Name);
+                    break;
+            }
 
             Console.ReadLine();
         }

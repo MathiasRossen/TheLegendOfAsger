@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    public enum BattleOutcome { Win, Draw, Lose };
-
+    public enum BattleOutcome { Win, Draw, Lose, None };
     public class GameController
     {
-
         public BattleOutcome CheckForWinner(Player player, ICreature enemy)
         {
             if (player.Attack >= enemy.Hp && enemy.Attack >= player.Hp)
