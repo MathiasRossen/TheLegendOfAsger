@@ -32,6 +32,10 @@ namespace TheLegendOfAsger
                         enemy = new Enemy("Local drunk", 6, 6);
                         BattleArena(player, enemy);
                         break;
+                    case "3":
+                        enemy = new Enemy("Weak, sick, handicapped and wounded Goblin", 7, 7);
+                        BattleArena(player, enemy);
+                        break;
                     default:
                         DisplayInputError();
                         break;
@@ -75,6 +79,7 @@ namespace TheLegendOfAsger
             Console.WriteLine("Choose an opponent:");
             Console.WriteLine(" 1. Street dog");
             Console.WriteLine(" 2. Local drunk");
+            Console.WriteLine(" 3. Weak, sick, handicapped and wounded Goblin");
         }
 
         public void DisplayInputError()
