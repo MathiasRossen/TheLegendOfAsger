@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameLogic.cs" />
-    <Compile Include="Goblin.cs" />
+    <Compile Include="Enemy.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="ICreature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

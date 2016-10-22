@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    public class Goblin : ICreature
+    public class Enemy : ICreature
     {
 
         int attack = 5;
         int hp = 5;
-        string name = "Goblin";
+        string name = "Enemy";
 
         public int Attack
         {
@@ -46,5 +46,12 @@ namespace GameLogic
                 return name;
             }
         }
+        // not a reff.
+        public Enemy(string name, int hp, int attack)
+        {
+            this.name = name;
+            this.hp = hp;
+            this.attack = attack;
+        } 
     }
 }
