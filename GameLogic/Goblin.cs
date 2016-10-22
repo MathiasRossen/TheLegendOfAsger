@@ -11,6 +11,7 @@ namespace GameLogic
 
         int attack = 5;
         int hp = 5;
+        string name = "Goblin";
 
         public int Attack
         {
@@ -35,6 +36,14 @@ namespace GameLogic
             set
             {
                 hp = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
             }
         }
     }

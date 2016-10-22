@@ -20,5 +20,10 @@ namespace GameLogic
             set;
         }
 
+        string Name
+        {
+            get;
+        }
     }
+
 }
