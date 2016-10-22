@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 namespace GameLogic
 {
     public enum BattleOutcome { Win, Draw, Lose, None };
+    public enum WeekDays { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
+
     public class GameController
     {
+        public static WeekDays CurrentDay = WeekDays.Monday;
+
         public BattleOutcome CheckForWinner(Player player, ICreature enemy)
         {
             player.Hp -= enemy.Attack;
@@ -16,24 +20,26 @@ namespace GameLogic
 
             if (player.Hp <= 0 && enemy.Hp <= 0 )
             {
-                player.Hp = player.MaxHp;
+                CurrentDay++;
                 return BattleOutcome.Draw;
             }
             else if (player.Hp > 0 && enemy.Hp <= 0)
             {
-                player.Hp = player.MaxHp;
                 player.SkillPoint += enemy.SkillPoint;
+                CurrentDay++;
                 return BattleOutcome.Win;
             }
             else if (enemy.Hp > 0 && player.Hp <= 0)
             {
-                player.Hp = player.MaxHp;
+                CurrentDay++;
                 return BattleOutcome.Lose;
             }
 
             return BattleOutcome.None;
 
         }
+
+
 
     }
 
