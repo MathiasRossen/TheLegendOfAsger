@@ -11,14 +11,16 @@ namespace GameLogic
     public class GameController
     {
 
-        public BattleOutcome CheckForWinner(ICreature creatureOne, ICreature creatureTwo)
+        public BattleOutcome CheckForWinner(Player player, ICreature enemy)
         {
-            if (creatureOne.Attack >= creatureTwo.Hp && creatureTwo.Attack >= creatureOne.Hp)
+            if (player.Attack >= enemy.Hp && enemy.Attack >= player.Hp)
             {
                 return BattleOutcome.Draw;
             }
-            else if (creatureOne.Attack >= creatureTwo.Hp)
+            else if (player.Attack >= enemy.Hp)
             {
+                player.Attack += enemy.SkillPoint;
+                player.Hp += enemy.SkillPoint;
                 return BattleOutcome.Win;
             }
             else
