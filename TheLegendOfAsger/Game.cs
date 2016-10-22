@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using GameLogic;
 
 namespace TheLegendOfAsger
@@ -36,7 +35,7 @@ namespace TheLegendOfAsger
                         break;
 
                     case "3":
-                        Days.PassDay();
+                        Rest(player);
                         break;
                     default:
                         DisplayInputError();
@@ -70,8 +69,7 @@ namespace TheLegendOfAsger
 
         public void DisplayChoices()
         {
-            Days.DisplayDay();
-            Console.WriteLine("{0} HP: {1}/{2}", player.Name, player.Hp, player.MaxHp);
+            Console.WriteLine("Day {3}: {4}. {0} HP: {1}/{2}", player.Name, player.Hp, player.MaxHp, Days.TotalDays, Days.CurrentDay.ToString());
             Console.WriteLine();
             Console.WriteLine("Choose an option: ");
             Console.WriteLine(" 1. Arena");
@@ -83,6 +81,14 @@ namespace TheLegendOfAsger
         {
             Console.WriteLine("You've got fat fingers! Now try again..");
             Console.ReadLine();
+        }
+
+        private void Rest(Player player)
+        {
+            if (Days.CurrentDay == WeekDays.Sunday)
+                player.Hp = player.MaxHp;
+
+            Days.PassDay();
         }
     }
 }
