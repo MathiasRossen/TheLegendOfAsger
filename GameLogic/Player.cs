@@ -13,6 +13,7 @@ namespace GameLogic
         int hp = 6;
         int xp = 0;
         string name = "Asger";
+        int skillPoint = 0;
 
         public int Attack
         {
@@ -62,7 +63,14 @@ namespace GameLogic
 
         public int SkillPoint
         {
-            get;
+            get
+            {
+                return skillPoint;
+            }
+            set
+            {
+                skillPoint = value;
+            }
             
         }
     }
