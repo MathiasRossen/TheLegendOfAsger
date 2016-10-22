@@ -65,7 +65,7 @@ namespace TheLegendOfAsger
 
         public void DisplayChoices()
         {
-            Console.WriteLine("{0}", player.Name);
+            Console.WriteLine("{0} HP: {1}/{2}", player.Name, player.Hp, player.Hp);
             Console.WriteLine("Choose an option: ");
             Console.WriteLine(" 1. Arena");
             Console.WriteLine(" 2. Stats");
