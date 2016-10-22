@@ -13,13 +13,13 @@ namespace GameLogic
 
         public BattleOutcome CheckForWinner(ICreature creatureOne, ICreature creatureTwo)
         {
-            if (creatureOne.Attack >= creatureTwo.Hp)
-            {
-                return BattleOutcome.Win;
-            }
-            else if (creatureOne.Attack >= creatureTwo.Hp && creatureTwo.Attack >= creatureOne.Hp)
+            if (creatureOne.Attack >= creatureTwo.Hp && creatureTwo.Attack >= creatureOne.Hp)
             {
                 return BattleOutcome.Draw;
+            }
+            else if (creatureOne.Attack >= creatureTwo.Hp)
+            {
+                return BattleOutcome.Win;
             }
             else
                 return BattleOutcome.Lose;
