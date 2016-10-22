@@ -11,17 +11,24 @@ namespace GameLogic
     {
         public BattleOutcome CheckForWinner(Player player, ICreature enemy)
         {
-            if (player.Attack >= enemy.Hp && enemy.Attack >= player.Hp)
+            player.Hp -= enemy.Attack;
+            enemy.Hp -= player.Attack;
+
+            if (player.Hp <= 0 && enemy.Hp <= 0 )
             {
                 return BattleOutcome.Draw;
             }
-            else if (player.Attack >= enemy.Hp)
+            else if (player.Hp > 0 && enemy.Hp <= 0)
             {
-                player.SkillPoint += enemy.SkillPoint;
                 return BattleOutcome.Win;
             }
-            else
+            else if (enemy.Hp > 0 && player.Hp <= 0)
+            {
                 return BattleOutcome.Lose;
+            }
+
+            return BattleOutcome.None;
+
         }
 
     }

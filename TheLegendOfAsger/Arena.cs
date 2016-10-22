@@ -7,7 +7,7 @@ namespace TheLegendOfAsger
     {
         ICreature[] enemyList = new ICreature[]
         {
-            new Enemy("Leaf in the wind", 0, 10, 1),
+            new Enemy("Leaf in the wind", 10, 0, 1),
             new Enemy("Street dog", 2, 3, 1),
             new Enemy("Local drunk", 6, 4, 2),
             new Enemy("Weak, sick, handicapped and wounded Goblin", 10, 12, 3)
