@@ -39,6 +39,14 @@ namespace GameLogic
 
         }
 
+        public static void PassDay()
+        {
+            if (CurrentDay == WeekDays.Sunday)
+            {
+                CurrentDay = WeekDays.Monday;
+            }
+            else CurrentDay++;
+        }
 
 
     }
