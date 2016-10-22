@@ -13,6 +13,7 @@ namespace GameLogic
         int hp = 5;
         string name = "Enemy";
         int skillPoint;
+        int maxHp;
         int currency;
 
         public int Attack
@@ -56,6 +57,13 @@ namespace GameLogic
                 return skillPoint;
             }
         }
+        public int MaxHp
+        {
+            get
+            {
+                return maxHp;
+            }
+        }
 
         public int Currency
         {
@@ -74,6 +82,7 @@ namespace GameLogic
             this.attack = attack;
             this.skillPoint = skillPoint;
             this.currency = currency;
+            maxHp = hp;
         } 
     }
 }

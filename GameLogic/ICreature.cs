@@ -30,6 +30,11 @@ namespace GameLogic
             get;
         }
 
+        int MaxHp
+        {
+            get;
+        }
+
         int Currency
         {
             get;

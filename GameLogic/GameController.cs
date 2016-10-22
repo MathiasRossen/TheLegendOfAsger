@@ -24,6 +24,7 @@ namespace GameLogic
             else if (player.Hp > 0 && enemy.Hp <= 0)
             {
                 Days.PassDay();
+                player.Currency += enemy.Currency;
                 player.SkillPoint += enemy.SkillPoint;
                 return BattleOutcome.Win;
             }
@@ -36,5 +37,7 @@ namespace GameLogic
             return BattleOutcome.None;
 
         }
+
+
     }
 }

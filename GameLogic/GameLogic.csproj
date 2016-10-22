@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consumables.cs" />
     <Compile Include="CreatureList.cs" />
     <Compile Include="Days.cs" />
     <Compile Include="GameController.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="IItem.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="ICreature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
