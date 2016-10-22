@@ -19,8 +19,7 @@ namespace GameLogic
             }
             else if (player.Attack >= enemy.Hp)
             {
-                player.Attack += enemy.SkillPoint;
-                player.Hp += enemy.SkillPoint;
+                player.SkillPoint += enemy.SkillPoint;
                 return BattleOutcome.Win;
             }
             else
