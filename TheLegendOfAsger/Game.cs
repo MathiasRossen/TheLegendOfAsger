@@ -74,7 +74,7 @@ namespace TheLegendOfAsger
             Console.WriteLine("Choose an option: ");
             Console.WriteLine(" 1. Arena");
             Console.WriteLine(" 2. Stats");
-            Console.WriteLine(" 3. Pass day");
+            Console.WriteLine(" 3. Rest");
         }
 
         public static void DisplayInputError()

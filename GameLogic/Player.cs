@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameLogic 
+﻿namespace GameLogic 
 {
    
     public class Player : ICreature
@@ -16,7 +10,6 @@ namespace GameLogic
         int skillPoint = 1;
         int maxHp = 1;
         int currency;
-
 
         public int Attack
         {
@@ -39,7 +32,8 @@ namespace GameLogic
 
             set
             {
-                hp = value;
+                if (value <= maxHp)
+                    hp = value;
             }
         }
 

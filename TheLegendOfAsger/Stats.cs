@@ -43,6 +43,8 @@ namespace TheLegendOfAsger
             Console.WriteLine("HP: {0}/{1}", player.Hp, player.MaxHp);
             Console.WriteLine("Attack: {0}", player.Attack);
             Console.WriteLine();
+            Console.WriteLine("Coins: {0}", player.Currency);
+            Console.WriteLine();
             Console.WriteLine("Skill points: {0}", player.SkillPoint);
         }
 

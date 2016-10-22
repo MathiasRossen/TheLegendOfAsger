@@ -13,10 +13,10 @@
         {
             enemyList = new ICreature[]
             {
-                new Enemy("Leaf in the wind", 10, 0, 1),
-                new Enemy("Street dog", 2, 3, 1),
-                new Enemy("Local drunk", 6, 4, 2),
-                new Enemy("Weak, sick, handicapped and wounded Goblin", 10, 12, 3)
+                new Enemy("Leaf in the wind", 10, 0, 1, 0),
+                new Enemy("Street dog", 2, 3, 1, 0),
+                new Enemy("Local drunk", 6, 4, 2, 1),
+                new Enemy("Weak, sick, handicapped and wounded Goblin", 10, 12, 3, 3)
             };
         }
 

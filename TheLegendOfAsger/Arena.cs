@@ -93,7 +93,7 @@ namespace TheLegendOfAsger
             switch (outcome) {
                 case BattleOutcome.Win:
                     Console.WriteLine("{0} has beaten {1}!", player.Name, enemy.Name);
-                    Console.Write("{0} has gained {1} skill point(s)!", player.Name, enemy.SkillPoint);
+                    Console.Write("{0} has gained {2} coin(s), and {1} skill point(s)!", player.Name, enemy.SkillPoint, enemy.Currency);
                     break;
 
                 case BattleOutcome.Draw:
