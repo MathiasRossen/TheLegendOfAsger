@@ -24,5 +24,6 @@ namespace GameLogic
         {
             Console.WriteLine(CurrentDay.ToString());
         }
+
     }
 }
