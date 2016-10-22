@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace GameLogic
 {
-    public enum outcome { Win, Draw, Lose };
+    public enum BattleOutcome { Win, Draw, Lose };
 
-    public class GameLogic
+    public class GameController
     {
 
-        public outcome CheckForWinner(ICreature creatureOne, ICreature creatureTwo)
+        public BattleOutcome CheckForWinner(ICreature creatureOne, ICreature creatureTwo)
         {
             if (creatureOne.Attack >= creatureTwo.Hp)
             {
-                return outcome.Win;
+                return BattleOutcome.Win;
             }
             else if (creatureOne.Attack >= creatureTwo.Hp && creatureTwo.Attack >= creatureOne.Hp)
             {
-                return outcome.Draw;
+                return BattleOutcome.Draw;
             }
             else
-                return outcome.Lose;
+                return BattleOutcome.Lose;
         }
     }
 }
