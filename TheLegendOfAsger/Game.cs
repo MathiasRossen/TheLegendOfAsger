@@ -6,13 +6,13 @@ namespace TheLegendOfAsger
 {
     class Game
     {
-        
+        Player player;
 
         public void Run()
         {
             bool running = true;
             string input;
-            Player player = new Player();
+            player = new Player();
 
             DisplayTitleScreen();
 
@@ -30,8 +30,8 @@ namespace TheLegendOfAsger
                         arena.ArenaLoop(player);
                         break;
                     case "2":
-                        break;
-                    case "3":
+                        Stats stats = new Stats();
+                        stats.StatLoop(player);
                         break;
                     default:
                         DisplayInputError();
@@ -65,8 +65,10 @@ namespace TheLegendOfAsger
 
         public void DisplayChoices()
         {
+            Console.WriteLine("{0}", player.Name);
             Console.WriteLine("Choose an option: ");
             Console.WriteLine(" 1. Arena");
+            Console.WriteLine(" 2. Stats");
         }
 
         public static void DisplayInputError()

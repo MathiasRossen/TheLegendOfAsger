@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            System.Console.Title = "The Legend of Asger ALPHA 0.000000000000000000000000000001";
+            System.Console.Title = "The Legend of Asger ALPHA 0.000000000000000000000000000002";
 
             Game game = new Game();
             game.Run();

@@ -7,9 +7,10 @@ namespace TheLegendOfAsger
     {
         ICreature[] enemyList = new ICreature[]
         {
-            new Enemy("Street dog", 5, 5, 1),
-            new Enemy("Local drunk", 6, 6, 1),
-            new Enemy("Weak, sick, handicapped and wounded Goblin", 7, 7, 2)
+            new Enemy("Leaf in the wind", 0, 10, 1),
+            new Enemy("Street dog", 2, 3, 1),
+            new Enemy("Local drunk", 6, 4, 2),
+            new Enemy("Weak, sick, handicapped and wounded Goblin", 10, 12, 3)
         };
 
         ICreature enemy;
@@ -52,7 +53,7 @@ namespace TheLegendOfAsger
             while (running);
         }
 
-        public void DisplayChoices()
+        private void DisplayChoices()
         {
             Console.WriteLine();
             Console.WriteLine("Choose an opponent or E to exit:");
@@ -65,7 +66,7 @@ namespace TheLegendOfAsger
             }
         }
 
-        public void BattleArena(Player player, ICreature enemy)
+        private void BattleArena(Player player, ICreature enemy)
         {
             GameController gameController = new GameController();
 
@@ -85,16 +86,19 @@ namespace TheLegendOfAsger
             BattleOutcome outcome = gameController.CheckForWinner(player, enemy);
 
             if (outcome == BattleOutcome.Win)
-                Console.Write("{0} has beaten {1}!", player.Name, enemy.Name);
+            {
+                Console.WriteLine("{0} has beaten {1}!", player.Name, enemy.Name);
+                Console.Write("{0} has gained {1} skill points!", player.Name, enemy.SkillPoint);
+            }
             else if (outcome == BattleOutcome.Draw)
-                Console.Write("{0} and {1} both died in the tragic battle.", player.Name, enemy.Name);
+                Console.Write("{0} and {1} both passed out in the tragic battle.", player.Name, enemy.Name);
             else
                 Console.Write("{0} was defeated by {1}!", player.Name, enemy.Name);
 
             Console.ReadLine();
         }
 
-        public void DisplayStats(ICreature creature)
+        private void DisplayStats(ICreature creature)
         {
             Console.WriteLine("Name: {0}", creature.Name);
             Console.WriteLine("HP: {0}", creature.Hp);

@@ -9,11 +9,11 @@ namespace GameLogic
    
     public class Player : ICreature
     {
-        int attack = 6;
-        int hp = 6;
+        int attack = 1;
+        int hp = 1;
         int xp = 0;
         string name = "Asger";
-        int skillPoint = 0;
+        int skillPoint = 1;
 
         public int Attack
         {
@@ -80,7 +80,7 @@ namespace GameLogic
             skillPoint--;
         }
 
-        public void InscreaseSkillAttackByOne()
+        public void IncreaseSkillAttackByOne()
         {
             attack++;
             skillPoint--;
