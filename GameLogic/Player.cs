@@ -73,5 +73,17 @@ namespace GameLogic
             }
             
         }
+
+        public void IncreaseSkillHpByOne()
+        {
+            hp++;
+            skillPoint--;
+        }
+
+        public void InscreaseSkillAttackByOne()
+        {
+            attack++;
+            skillPoint--;
+        }
     }
 }
