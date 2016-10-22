@@ -70,7 +70,7 @@ namespace TheLegendOfAsger
 
         public void DisplayChoices()
         {
-            DisplayDay();
+            Days.DisplayDay();
             Console.WriteLine("{0} HP: {1}/{2}", player.Name, player.Hp, player.MaxHp);
             Console.WriteLine();
             Console.WriteLine("Choose an option: ");
@@ -84,40 +84,5 @@ namespace TheLegendOfAsger
             Console.WriteLine("You've got fat fingers! Now try again..");
             Console.ReadLine();
         }
-
-        public static void DisplayDay()
-        {
-            switch (Days.CurrentDay)
-            {
-                case WeekDays.Monday:
-                    Console.WriteLine("Monday");
-                    break;
-
-                case WeekDays.Tuesday:
-                    Console.WriteLine("Tuesday");
-                    break;
-
-                case WeekDays.Wednesday:
-                    Console.WriteLine("Wednesday");
-                    break;
-
-                case WeekDays.Thursday:
-                    Console.WriteLine("Thursday");
-                    break;
-
-                case WeekDays.Friday:
-                    Console.WriteLine("Friday");
-                    break;
-
-                case WeekDays.Saturday:
-                    Console.WriteLine("Saturday");
-                    break;
-
-                case WeekDays.Sunday:
-                    Console.WriteLine("Sunday");
-                    break;
-            }
-        }
-        
     }
 }
