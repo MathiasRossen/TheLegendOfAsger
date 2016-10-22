@@ -5,6 +5,8 @@
     {
         public static WeekDays CurrentDay = WeekDays.Monday;
 
+        public static int TotalDays = 1;
+
         public static void PassDay()
         {
             if (CurrentDay == WeekDays.Sunday)
@@ -12,6 +14,9 @@
                 CurrentDay = WeekDays.Monday;
             }
             else CurrentDay++;
+
+            TotalDays++;
         }
+
     }
 }
