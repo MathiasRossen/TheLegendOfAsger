@@ -16,15 +16,18 @@ namespace GameLogic
 
             if (player.Hp <= 0 && enemy.Hp <= 0 )
             {
+                player.Hp = player.MaxHp;
                 return BattleOutcome.Draw;
             }
             else if (player.Hp > 0 && enemy.Hp <= 0)
             {
+                player.Hp = player.MaxHp;
                 player.SkillPoint += enemy.SkillPoint;
                 return BattleOutcome.Win;
             }
             else if (enemy.Hp > 0 && player.Hp <= 0)
             {
+                player.Hp = player.MaxHp;
                 return BattleOutcome.Lose;
             }
 

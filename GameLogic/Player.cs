@@ -14,6 +14,7 @@ namespace GameLogic
         int xp = 0;
         string name = "Asger";
         int skillPoint = 1;
+        int maxHp = 1;
 
         public int Attack
         {
@@ -74,9 +75,21 @@ namespace GameLogic
             
         }
 
+        public int MaxHp
+        {
+            get
+            {
+                return maxHp;
+            }
+            set
+            {
+                maxHp = value;
+            }
+        }
+
         public void IncreaseSkillHpByOne()
         {
-            hp++;
+            maxHp++;
             skillPoint--;
         }
 
