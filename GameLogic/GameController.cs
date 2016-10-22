@@ -20,6 +20,7 @@ namespace GameLogic
             }
             else if (player.Hp > 0 && enemy.Hp <= 0)
             {
+                player.SkillPoint += enemy.SkillPoint;
                 return BattleOutcome.Win;
             }
             else if (enemy.Hp > 0 && player.Hp <= 0)
